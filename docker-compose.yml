@@ -30,7 +30,7 @@ services:
             dockerfile: dockerfile-php
 
         ports:
-            - "9000"
+            - 9000
         volumes:
             # Internal code lives here
             - ./public:/var/www/html
