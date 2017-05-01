@@ -24,7 +24,7 @@ services:
             - ./nginx/ssl/:/etc/nginx/ssl
 
     phpfpm:
-        container_name: phpfpm_extras
+        container_name: phpfpm
         build:
             context: .
             dockerfile: dockerfile-php
@@ -70,6 +70,7 @@ services:
             - ./solr-data/collection1:/opt/solr/server/solr/collection1/data
 
     mysql:
+      container_name: mysql
       image: mariadb
 
       # host machine port:container port
