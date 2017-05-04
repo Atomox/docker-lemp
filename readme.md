@@ -32,3 +32,8 @@ php -r "unlink('composer-setup.php');"
  5. `docker-compose ps` to confirm nothing failed. There should be 4 containers, including: `SOLR`, `NGINX`, `MYSQL`, and `PHPFPM`.
 
 
+# SOLR
+
+## Create a new Core:
+
+`docker exec -it --user=solr [my_solr_container] bin/solr create_core -c [my_core_name]`
