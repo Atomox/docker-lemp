@@ -36,3 +36,7 @@ php -r "unlink('composer-setup.php');"
 rysyslog is installed on phpfpm. Start with `service rsyslog start` inside the phpfpm container.
 
 For all logs: `docker-compose logs -f [optinal_container_name]` (tails the logs)
+
+
+## Drush for Drupal 8
+Drush is built in the `PHPFPM` container. When you `docker exec` into that container, you can run drush commands as normal.
