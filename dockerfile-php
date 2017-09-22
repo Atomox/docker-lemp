@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
       libmemcached-dev \
       vim \
       rsyslog \
+      mysql-client \
     && docker-php-ext-install -j$(nproc) \
       exif \
       gd \
@@ -32,7 +33,7 @@ RUN apt-get update && apt-get install -y \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 
 # Install drush 8 for Drupal 8.
-RUN composer global require drush/drush::8.x \
+RUN composer global require drush/drush:8.* \
     && ln -s /root/.composer/vendor/drush/drush /usr/bin/drush
 ENV PATH="/root/.composer/vendor/drush/drush:${PATH}"
 

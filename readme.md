@@ -39,4 +39,4 @@ For all logs: `docker-compose logs -f [optinal_container_name]` (tails the logs)
 
 
 ## Drush for Drupal 8
-Drush is built in the `PHPFPM` container. When you `docker exec` into that container, you can run drush commands as normal.
+Drush is built in the `PHPFPM` container. When you `docker exec` into that container, you can run drush commands as normal. We add the mysql-client to the php container, so drush can communicate with the mysql container, and run mysql commands in general.
